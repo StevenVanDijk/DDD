@@ -1,0 +1,377 @@
+{
+  "domain": {
+    "name": "book ordering",
+    "actors": {
+      "Person": "<svg viewBox=\"0 0 24 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>",
+      "Group": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"48\" viewBox=\"0 0 24 26\"><path d=\"M0 0h24v24H0z\" fill=\"none\"/><path d=\"M16.5 13c-1.2 0-3.07.34-4.5 1-1.43-.67-3.3-1-4.5-1C5.33 13 1 14.08 1 16.25V19h22v-2.75c0-2.17-4.33-3.25-6.5-3.25zm-4 4.5h-10v-1.25c0-.54 2.56-1.75 5-1.75s5 1.21 5 1.75v1.25zm9 0H14v-1.25c0-.46-.2-.86-.52-1.22.88-.3 1.96-.53 3.02-.53 2.44 0 5 1.21 5 1.75v1.25zM7.5 12c1.93 0 3.5-1.57 3.5-3.5S9.43 5 7.5 5 4 6.57 4 8.5 5.57 12 7.5 12zm0-5.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 5.5c1.93 0 3.5-1.57 3.5-3.5S18.43 5 16.5 5 13 6.57 13 8.5s1.57 3.5 3.5 3.5zm0-5.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z\"/></svg>",
+      "System": "<svg viewBox=\"0 0 24 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20,18c1.1,0,2-0.9,2-2V6c0-1.1-0.9-2-2-2H4C2.9,4,2,4.9,2,6v10c0,1.1,0.9,2,2,2H0v2h24v-2H20z M4,6h16v10H4V6z\"/></svg>"
+    },
+    "workObjects": {
+      "Document": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 26\"><path fill=\"none\" d=\"M0 0h24v24H0V0z\"/><path d=\"M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z\"/></svg>",
+      "Folder": "<svg viewBox=\"0 0 24 26\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"none\" d=\"M0,0h24v24H0V0z\"/><path d=\"M9.17,6l2,2H20v10L4,18V6H9.17 M10,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V8c0-1.1-0.9-2-2-2 h-8L10,4L10,4z\"/></svg>",
+      "Call": "<svg viewBox=\"0 0 24 26\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"none\" d=\"M0,0h24v24H0V0z\"/><path d=\"M6.54,5C6.6,5.89,6.75,6.76,6.99,7.59l-1.2,1.2C5.38,7.59,5.12,6.32,5.03,5H6.54 M16.4,17.02c0.85,0.24,1.72,0.39,2.6,0.45 v1.49c-1.32-0.09-2.59-0.35-3.8-0.75L16.4,17.02 M7.5,3H4C3.45,3,3,3.45,3,4c0,9.39,7.61,17,17,17c0.55,0,1-0.45,1-1v-3.49\tc0-0.55-0.45-1-1-1c-1.24,0-2.45-0.2-3.57-0.57c-0.1-0.04-0.21-0.05-0.31-0.05c-0.26,0-0.51,0.1-0.71,0.29l-2.2,2.2 c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2C9.1,8.31,9.18,7.92,9.07,7.57C8.7,6.45,8.5,5.25,8.5,4C8.5,3.45,8.05,3,7.5,3L7.5,3z\"/></svg>",
+      "Email": "<svg viewBox=\"0 0 24 26\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"none\" d=\"M0,0h24v24H0V0z\"/><path fill-opacity=\"0.9\" d=\"M12,1.95c-5.52,0-10,4.48-10,10s4.48,10,10,10h5v-2h-5c-4.34,0-8-3.66-8-8s3.66-8,8-8s8,3.66,8,8v1.43 c0,0.79-0.71,1.57-1.5,1.57S17,14.17,17,13.38v-1.43c0-2.76-2.24-5-5-5s-5,2.24-5,5s2.24,5,5,5c1.38,0,2.64-0.56,3.54-1.47 c0.65,0.89,1.77,1.47,2.96,1.47c1.97,0,3.5-1.6,3.5-3.57v-1.43C22,6.43,17.52,1.95,12,1.95z M12,14.95c-1.66,0-3-1.34-3-3 s1.34-3,3-3s3,1.34,3,3S13.66,14.95,12,14.95z\"/></svg>",
+      "Conversation": "<svg height=\"48\" viewBox=\"0 0 24 26\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0h24v24H0V0z\" fill=\"none\"/><path d=\"M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z\"/></svg>",
+      "Info": "<svg height=\"48\" viewBox=\"0 0 24 26\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0h24v24H0z\" fill=\"none\"/><path d=\"M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z\"/></svg>",
+      "Book shop": "data:image/png;base64,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",
+      "Book": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGZpbGw9IiMwMDAwMDAiPjxnPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIgeD0iMCIvPjwvZz48Zz48cGF0aCBkPSJNMjIuNDcsNS4yQzIyLDQuOTYsMjEuNTEsNC43NiwyMSw0LjU5djEyLjAzQzE5Ljg2LDE2LjIxLDE4LjY5LDE2LDE3LjUsMTZjLTEuOSwwLTMuNzgsMC41NC01LjUsMS41OFY1LjQ4IEMxMC4zOCw0LjU1LDguNTEsNCw2LjUsNEM0LjcxLDQsMy4wMiw0LjQ0LDEuNTMsNS4yQzEuMiw1LjM2LDEsNS43MSwxLDYuMDh2MTIuMDhjMCwwLjU4LDAuNDcsMC45OSwxLDAuOTkgYzAuMTYsMCwwLjMyLTAuMDQsMC40OC0wLjEyQzMuNjksMTguNCw1LjA1LDE4LDYuNSwxOGMyLjA3LDAsMy45OCwwLjgyLDUuNSwyYzEuNTItMS4xOCwzLjQzLTIsNS41LTJjMS40NSwwLDIuODEsMC40LDQuMDIsMS4wNCBjMC4xNiwwLjA4LDAuMzIsMC4xMiwwLjQ4LDAuMTJjMC41MiwwLDEtMC40MSwxLTAuOTlWNi4wOEMyMyw1LjcxLDIyLjgsNS4zNiwyMi40Nyw1LjJ6IE0xMCwxNi42MkM4Ljg2LDE2LjIxLDcuNjksMTYsNi41LDE2IGMtMS4xOSwwLTIuMzYsMC4yMS0zLjUsMC42MlY2LjcxQzQuMTEsNi4yNCw1LjI4LDYsNi41LDZDNy43LDYsOC44OSw2LjI1LDEwLDYuNzJWMTYuNjJ6IE0xOSwwLjVsLTUsNVYxNWw1LTQuNVYwLjV6Ii8+PC9nPjwvc3ZnPg==",
+      "Store": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE4LjM2IDlsLjYgM0g1LjA0bC42LTNoMTIuNzJNMjAgNEg0djJoMTZWNHptMCAzSDRsLTEgNXYyaDF2NmgxMHYtNmg0djZoMnYtNmgxdi0ybC0xLTV6TTYgMTh2LTRoNnY0SDZ6Ii8+PC9zdmc+",
+      "Euro": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 26\"><path fill=\"none\" d=\"M0 0h24v24H0V0z\"/><path d=\"M15 18.5c-2.51 0-4.68-1.42-5.76-3.5H15v-2H8.58c-.05-.33-.08-.66-.08-1s.03-.67.08-1H15V9H9.24C10.32 6.92 12.5 5.5 15 5.5c1.61 0 3.09.59 4.23 1.57L21 5.3C19.41 3.87 17.3 3 15 3c-3.92 0-7.24 2.51-8.48 6H3v2h3.06c-.04.33-.06.66-.06 1s.02.67.06 1H3v2h3.52c1.24 3.49 4.56 6 8.48 6 2.31 0 4.41-.87 6-2.3l-1.78-1.77c-1.13.98-2.6 1.57-4.22 1.57z\"/></svg>"
+    }
+  },
+  "dst": [
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_0538",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 166,
+            "y": 171
+          },
+          "x": 179,
+          "y": 209
+        },
+        {
+          "original": {
+            "x": 260,
+            "y": 445
+          },
+          "x": 260,
+          "y": 445
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_6906"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_6906",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 426,
+      "width": 500,
+      "height": 38.01052967453733,
+      "text": "Last tip: you don't have to reuse objects placed on the canvas. It is perfectly OK to have one called \"ordered book\" and another \"cheapest book\" for example.",
+      "number": 38.01052967453733
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_4102",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 166,
+            "y": 171
+          },
+          "x": 181,
+          "y": 208
+        },
+        {
+          "original": {
+            "x": 260,
+            "y": 403
+          },
+          "x": 260,
+          "y": 403
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_4404"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_4404",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 390,
+      "width": 500,
+      "height": 25.885449904275685,
+      "text": "You created the first step of the story! Keep adding until the domain is fully described.",
+      "number": 25.885449904275685
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_9880",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 166,
+            "y": 171
+          },
+          "x": 183,
+          "y": 206
+        },
+        {
+          "original": {
+            "x": 260,
+            "y": 368
+          },
+          "x": 260,
+          "y": 368
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_4016"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_4016",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 354,
+      "width": 500,
+      "height": 27.799936183790685,
+      "text": "Double-click the arrow and type \"uses\". Click \"Save\".",
+      "number": 27.799936183790685
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_6172",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 166,
+            "y": 171
+          },
+          "x": 184,
+          "y": 204
+        },
+        {
+          "original": {
+            "x": 251,
+            "y": 326
+          },
+          "x": 251,
+          "y": 326
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_7694"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_7694",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 317,
+      "width": 500,
+      "height": 25.24728781110402,
+      "text": "Click on \"Customer\", click the arrow icon and connect it to \"phone\"",
+      "number": 25.24728781110402
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_1174",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 166,
+            "y": 171
+          },
+          "x": 187,
+          "y": 201
+        },
+        {
+          "original": {
+            "x": 250,
+            "y": 290
+          },
+          "x": 250,
+          "y": 290
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_9143"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_9143",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 277,
+      "width": 500,
+      "height": 26.52361199744735,
+      "text": "Next, drag the phone icon to the canvas and name it \"phone\".",
+      "number": 26.52361199744735
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_8089",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 166,
+            "y": 171
+          },
+          "x": 193,
+          "y": 196
+        },
+        {
+          "original": {
+            "x": 250,
+            "y": 248
+          },
+          "x": 250,
+          "y": 248
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_3834"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_3834",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 234,
+      "width": 500,
+      "height": 27.16177409061902,
+      "text": "Start by dragging the top-most Actor to the canvas and type \"Customer\". End with <enter>.",
+      "number": 27.16177409061902
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_4408",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 166,
+            "y": 171
+          },
+          "x": 202,
+          "y": 186
+        },
+        {
+          "original": {
+            "x": 250,
+            "y": 207
+          },
+          "x": 250,
+          "y": 207
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_9757"
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_9757",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 194,
+      "width": 500,
+      "height": 24.609125717932354,
+      "text": "You need to create triples Actor ---activity---> Workobject.",
+      "number": 24.609125717932354
+    },
+    {
+      "type": "domainStory:connection",
+      "name": "",
+      "id": "connection_0221",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "waypoints": [
+        {
+          "original": {
+            "x": 199,
+            "y": 161
+          },
+          "x": 199,
+          "y": 161
+        },
+        {
+          "original": {
+            "x": 255,
+            "y": 145
+          },
+          "x": 255,
+          "y": 145
+        }
+      ],
+      "source": "shape_1634",
+      "target": "shape_3148"
+    },
+    {
+      "type": "domainStory:workObjectDocument",
+      "name": "Tips",
+      "id": "shape_1634",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "pickedColor": "black",
+      "x": 128,
+      "y": 133
+    },
+    {
+      "type": "domainStory:textAnnotation",
+      "name": "",
+      "id": "shape_3148",
+      "$type": "Element",
+      "di": {},
+      "$descriptor": {},
+      "x": 260,
+      "y": 115,
+      "text": "Drag icons from the toolbar to the canvas. An icon is either an Actor or a Workobject. Actors perform an activity on/with a Work object.  After connecting the Actor icon and the Workobject icon with an Activity arrow, double click on the arrow to name it.",
+      "number": 66,
+      "width": 500,
+      "height": 66
+    },
+    {
+      "info": ""
+    },
+    {
+      "version": "2.0.0-dev"
+    }
+  ]
+}
